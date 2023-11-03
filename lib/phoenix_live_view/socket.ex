@@ -42,8 +42,9 @@ defmodule Phoenix.LiveView.Socket do
       def runtime_opts() do
         Keyword.put(@session_options, :domain, host())
       end
+
   """
-  use Phoenix.Socket
+  use Phoenix.Socket, log: :debug
 
   require Logger
 
